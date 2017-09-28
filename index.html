@@ -8,13 +8,14 @@
 	
 </body>
 	<script type="text/javascript">
-	
-	box({
-       'name': 'test'
-    });
+	function jsonP(url){
+		var oScript = document.createElement('script');
+		oScript.type = 'text/javascript';
+		oScript.src = 'test.js';
+		document.getElementsByTagName('head')[0].appendChild(oScript);
 
-    function box(json){
-        alert(json.name);
-    }
+	}
+	jsonP('test.js');
+	
 	</script>
 </html>
